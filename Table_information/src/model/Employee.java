@@ -1,7 +1,6 @@
 package model;
 
 
-
 import lombok.Data;
 
 import javax.print.DocFlavor;
@@ -9,7 +8,7 @@ import java.sql.Date;
 import java.util.Objects;
 
 @Data
-public class Employee implements Comparable<Employee>{
+public class Employee implements Comparable<Employee> {
     private int id;
     private String name;
     private String family;
@@ -30,20 +29,19 @@ public class Employee implements Comparable<Employee>{
         return Objects.hash(id, name, family, salary, personalCode, date);
     }
 
-
     @Override
     public String toString() {
-        return
-                 name + "   "+
-                 family + "  "+
-                 salary +"  "+
-                personalCode +"  "+
-              date
-                ;
+        return "Employee{" +
+                "name='" + name + '\'' +
+                ", family='" + family + '\'' +
+                ", salary=" + salary +
+                ", personalCode=" + personalCode +
+                ", date=" + date +
+                '}';
     }
 
     @Override
     public int compareTo(Employee o) {
-        return Integer.compare(salary,o.salary) ;
+        return Integer.compare(salary, o.salary);
     }
 }

@@ -28,7 +28,7 @@ public class EmployeeDao {
             findId.setInt(1, 1395);
             ResultSet resultSet = findId.executeQuery();
             while (resultSet.next()) {
-                  Employee employee=setEmployee(resultSet);
+                Employee employee = setEmployee(resultSet);
                 employeeList.add(employee);
             }
 
